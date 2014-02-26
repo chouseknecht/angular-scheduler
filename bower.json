@@ -1,0 +1,31 @@
+{
+  "name": "angular-scheduler",
+  "version": "0.0.0",
+  "authors": [
+    "Chris Houseknecht <chouse@ansible.com>"
+  ],
+  "description": "Implementation of FuelUX Scheduler within the AngularJS framework.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-route": "latest",
+    "angular-sanitize": "latest",
+    "components-font-awesome": "latest"
+  },
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "requirejs": "~2.1.11",
+    "twitter": "latest",
+    "timezone-js": "~0.4.7",
+    "rrule": "~2.0.0",
+    "underscore": "~1.6.0",
+    "less": "~1.6.3"
+  }
+}
