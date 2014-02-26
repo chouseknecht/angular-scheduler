@@ -1,0 +1,4 @@
+angular-scheduler
+=================
+
+Scheduling widget.
