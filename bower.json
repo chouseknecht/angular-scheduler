@@ -1,10 +1,10 @@
 {
   "name": "angular-scheduler",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Chris Houseknecht <chouse@ansible.com>"
   ],
-  "description": "Implementation of FuelUX Scheduler within the AngularJS framework.",
+  "description": "Angular based UI widget for creating repeat schedule entries.",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -14,18 +14,23 @@
     "tests"
   ],
   "devDependencies": {
-    "angular-route": "latest",
-    "angular-sanitize": "latest",
-    "components-font-awesome": "latest"
+    "angular-route": "*",
+    "components-font-awesome": "*",
+    "jquery": "*",
+    "jqueryui": "*",
+    "less": "*"
   },
   "dependencies": {
-    "angular": "latest",
-    "jquery": "latest",
-    "requirejs": "~2.1.11",
-    "twitter": "latest",
-    "timezone-js": "~0.4.7",
-    "rrule": "~2.0.0",
-    "underscore": "~1.6.0",
-    "less": "~1.6.3"
-  }
+    "angular": "~1.2.14",
+    "angular-timezones": "*",
+    "underscore": "*",
+    "twitter": "*"
+  },
+  "homepage": "https://github.com/chouseknecht/angular-scheduler",
+  "main": "git@github.com:chouseknecht/angular-scheduler.git",
+  "keywords": [
+    "schedule",
+    "rrule",
+    "calendar"
+  ]
 }

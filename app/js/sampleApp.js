@@ -7,7 +7,7 @@
 
 'use strict';
 
-angular.module('sampleApp', ['ngRoute', 'ngSanitize', 'AngularScheduler'])
+angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
         
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -22,12 +22,8 @@ angular.module('sampleApp', ['ngRoute', 'ngSanitize', 'AngularScheduler'])
 
     .controller('sampleController', ['$scope', '$filter', 'SchedulerInit', function($scope, $filter, SchedulerInit) {
     
-        var scheduler = SchedulerInit({ scope: $scope }),
-            expected = new Date(1970, 1, 1),
-            actual = $filter('tzAlign')(expected, {});
-
-        console.log(actual);
-
+        var scheduler = SchedulerInit({ scope: $scope });
+       
         scheduler.inject('form-container', true);
         
         $scope.resetForm = function() { scheduler.clear(); };

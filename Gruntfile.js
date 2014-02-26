@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "lib/angular-scheduler.min.css": "lib/angular-scheduler.less"
+                    "lib/angular-scheduler.min.css": "lib/angular-scheduler.css"
                 }
             }
         }
