@@ -25,6 +25,11 @@ angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
         var scheduler = SchedulerInit({ scope: $scope });
        
         scheduler.inject('form-container', true);
+
+        $scope.setRRule = function() {
+            $scope.inputRRuleMsg = '';
+            $scope.inputRRuleMsg = scheduler.setRRule($scope.inputRRule);
+        };
         
         $scope.resetForm = function() { scheduler.clear(); };
 

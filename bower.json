@@ -22,9 +22,10 @@
   },
   "dependencies": {
     "angular": "~1.2.14",
-    "angular-timezones": "*",
     "underscore": "*",
-    "twitter": "*"
+    "twitter": "*",
+    "requirejs": "~2.1.11",
+    "rrule": "~2.0.0"
   },
   "homepage": "https://github.com/chouseknecht/angular-scheduler",
   "main": "git@github.com:chouseknecht/angular-scheduler.git",

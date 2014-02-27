@@ -1,4 +1,21 @@
 
 <div id="form-container"></div>
 
+<hr />
+
+<div id="set-value-test">
+    <h4>RRule Demo</h4>
+    <p>Enter an RRule to display in the form above. For RRule syntax refer to examples at <a href="https://github.com/jkbr/rrule">https://github.com/jkbr/rrule</a>. Click Show Me to see the form change.</p>
+    <form class="form" role="form">
+        <div class="form-group">
+            <label>RRule</label>
+            <input type="text" ng-model="inputRRule" class="form-control" ng-keypress="inputRRuleMsg='';">
+            <div class="error" ng-bind="inputRRuleMsg" style="height: 20px;"></div>
+        </div>
+    </form>
+    <div class="button-group">
+        <button type="button" class="btn btn-primary btn-sm" ng-click="setRRule()">Show Me</button>
+    </div>
+</div>
+
 <div id="message"><div>
