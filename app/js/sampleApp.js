@@ -20,6 +20,10 @@ angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
         });
     }])
 
+    .constant('AngularScheduler.partial', '/lib/angular-scheduler.html')
+    .constant('AngularScheduler.useTimezone', true)
+    .constant('AngularScheduler.showUTCField', true)
+
     .controller('sampleController', ['$scope', '$filter', 'SchedulerInit', function($scope, $filter, SchedulerInit) {
     
         var scheduler = SchedulerInit({ scope: $scope });

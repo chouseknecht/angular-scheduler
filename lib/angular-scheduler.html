@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <label>Start Time <span class="fmt-help">HH24:MM:SS</span></label>
+                        <label>Start Time <span class="fmt-help">HH24:MM:SS</span><span class="fmt-help" ng-show="!schedulerShowTimeZone">UTC</span></label>
                         <div class="input-group">
                             <input name="schedulerStartHour" id="schedulerStartHour" sch-spinner="scheduler_form" class="scheduler-time-spinner"
                                 ng-model="schedulerStartHour" data-zero-pad="2" placeholder="HH24" min="0" max="23" required ng-change="scheduleTimeChange" >
@@ -61,14 +61,14 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3" ng-show="schedulerShowTimeZone">
                     <div class="form-group">
                         <label>Time Zone</label>
                         <select name="schedulerTimeZone" id="schedulerTimeZone" ng-model="schedulerTimeZone" ng-options="z.name for z in timeZones"
                             required class="form-control input-sm" ng-change="scheduleTimeChange()" ></select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" ng-show="schedulerShowUTCStartTime">
                     <div class="form-group">
                         <label>UTC Start Time</label>
                         <input type="text" name="schedulerUTCTime" ng-model="schedulerUTCTime" id="schedulerUTCTime" class="form-control input-sm" readonly>

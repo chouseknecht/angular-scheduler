@@ -18,14 +18,15 @@
     "components-font-awesome": "*",
     "jquery": "*",
     "jqueryui": "*",
-    "less": "*"
+    "less": "*",
+    "angular-mocks": "~1.2.13"
   },
   "dependencies": {
     "angular": "~1.2.14",
     "underscore": "*",
     "twitter": "*",
-    "requirejs": "~2.1.11",
-    "rrule": "~2.0.0"
+    "rrule": "*",
+    "timezone-js": "*"
   },
   "homepage": "https://github.com/chouseknecht/angular-scheduler",
   "main": "git@github.com:chouseknecht/angular-scheduler.git",
