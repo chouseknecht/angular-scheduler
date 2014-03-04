@@ -26,7 +26,8 @@
     "underscore": "*",
     "twitter": "*",
     "rrule": "*",
-    "timezone-js": "*"
+    "timezone-js": "*",
+    "angular-tz-extensions":"*"
   },
   "homepage": "https://github.com/chouseknecht/angular-scheduler",
   "main": "git@github.com:chouseknecht/angular-scheduler.git",

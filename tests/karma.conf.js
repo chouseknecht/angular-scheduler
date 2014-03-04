@@ -11,20 +11,24 @@ module.exports = function(config) {
     // frameworks to use
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
     'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/jqueryui/ui/minified/jquery-ui.min.js',
+    'bower_components/twitter/dist/js/bootstrap.min.js',
     'bower_components/timezone-js/src/date.js',
-    'bower_components/angular-timezones/packages/jstimezonedetect/jstz.min.js',
+    'bower_components/angular-tz-extensions/packages/jstimezonedetect/jstz.min.js',
     'bower_components/underscore/underscore.js',
     'bower_components/rrule/lib/rrule.js',
     'bower_components/angular/angular.min.js',
     'bower_components/angular-mocks/angular-mocks.js',
     'bower_components/angular-route/angular-route.min.js',
-    'bower_components/angular-timezones/js/angular-timezones.min.js',
+    'bower_components/angular-tz-extensions/lib/angular-tz-extensions.js',
     'lib/angular-scheduler.js',
-    'tests/GetRRule.js' 
+    'tests/GetRRule.js',
+
+    // fixtures
+    { pattern: 'bower_components/angular-tz-extensions/tz/data/*', watched: false, served: true, included: false }
     ],
 
 
@@ -49,7 +53,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -64,7 +68,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Firefox', 'Chrome'],
+    browsers: ['Firefox','Chrome'],
 
 
     // If browser does not capture in given timeout [ms], kill it

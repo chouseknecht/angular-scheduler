@@ -7,7 +7,7 @@
 
 'use strict';
 
-angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
+angular.module('sampleApp', ['ngRoute', 'AngularScheduler', 'Timezones'])
         
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -21,14 +21,18 @@ angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
     }])
 
     .constant('AngularScheduler.partial', '/lib/angular-scheduler.html')
-    .constant('AngularScheduler.useTimezone', true)
-    .constant('AngularScheduler.showUTCField', true)
+    .constant('AngularScheduler.useTimezone', false)
+    .constant('AngularScheduler.showUTCField', false)
+    .constant('$timezones.definitions.location', '/bower_components/angular-tz-extensions/tz/data')
 
     .controller('sampleController', ['$scope', '$filter', 'SchedulerInit', function($scope, $filter, SchedulerInit) {
     
         var scheduler = SchedulerInit({ scope: $scope });
        
         scheduler.inject('form-container', true);
+
+        console.log('User timezone: ');
+        console.log(scheduler.getUserTimezone());
 
         $scope.setRRule = function() {
             $scope.inputRRuleMsg = '';
@@ -44,7 +48,7 @@ angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
                     "<form>\n" +
                     "<div class=\"form-group\">\n" +
                     "<label>RRule</label>\n" +
-                    "<textarea readonly class=\"form-control\" rows=\"8\">" + schedule.rrule + "</textarea>\n" +
+                    "<textarea id=\"rrule-result\" readonly class=\"form-control\" rows=\"8\">" + schedule.rrule + "</textarea>\n" +
                     "</div>\n" +
                     "</form>\n",
                     wheight = $(window).height(),
@@ -68,7 +72,7 @@ angular.module('sampleApp', ['ngRoute', 'AngularScheduler'])
                                 .empty().attr({ 'class': 'close' }).text('x');
                             // fix the OK button
                             $('.ui-dialog[aria-describedby="message"]').find('.ui-dialog-buttonset button:first')
-                                .attr({ 'class': 'btn btn-primary' });
+                                .attr({ 'class': 'btn btn-primary', 'id': 'modal-ok-button' });
                         }
                     });
             }
