@@ -34,7 +34,6 @@
                                         <i class="fa fa-calendar"></i></button>
                                 </span>
                         </div>
-                        <div class="error" ng-show="scheduler_form_schedulerStartDt_error" ng-bind="scheduler_form_schedulerStartDt_error"></div>
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -52,6 +51,12 @@
                 </div>
             </div>
             
+            <div class="row error-pull-up">
+                <div class="col-md-12">
+                    <div class="error" ng-show="scheduler_form_schedulerStartDt_error" ng-bind="scheduler_form_schedulerStartDt_error"></div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-4" ng-show="schedulerShowTimeZone">
                     <div class="form-group">
@@ -71,7 +76,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Repeat</label>
+                        <label>Repeat frequency</label>
                         <select name="schedulerFrequency" id="schedulerFrequency" ng-model="schedulerFrequency"
                             ng-options="f.name for f in frequencyOptions" required class="form-control input-sm"
                             ng-change="scheduleRepeatChange()"></select>
