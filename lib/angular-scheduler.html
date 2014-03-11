@@ -15,16 +15,13 @@
     <div class="col-md-12">
 
         <form class="form" role="form" name="scheduler_form" novalidate>    
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label><span class="red-text">*</span> Name</label>
-                        <input type="text" class="form-control input-sm" name="schedulerName" id="schedulerName" ng-model="schedulerName" required placeholder="Schedule name">
-                        <div class="error" ng-show="scheduler_form.schedulerName.$dirty && scheduler_form.schedulerName.$error.required">Schedule name is required</div>
-                    </div>
-                </div>
+            
+            <div class="form-group">
+                <label><span class="red-text">*</span> Name</label>
+                <input type="text" class="form-control input-sm" name="schedulerName" id="schedulerName" ng-model="schedulerName" required placeholder="Schedule name">
+                <div class="error" ng-show="scheduler_form.schedulerName.$dirty && scheduler_form.schedulerName.$error.required">Schedule name is required</div>
             </div>
-
+            
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
@@ -37,6 +34,7 @@
                                         <i class="fa fa-calendar"></i></button>
                                 </span>
                         </div>
+                        <div class="error" ng-show="scheduler_form_schedulerStartDt_error" ng-bind="scheduler_form_schedulerStartDt_error"></div>
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -53,13 +51,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="error pull-up" ng-show="scheduler_form.schedulerStartDt.$dirty && scheduler_form_schedulerStartDt_error" ng-bind="scheduler_form_schedulerStartDt_error"></div>
-                </div>
-            </div>
-
+            
             <div class="row">
                 <div class="col-md-4" ng-show="schedulerShowTimeZone">
                     <div class="form-group">
