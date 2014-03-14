@@ -19,16 +19,17 @@ describe("Scheduler Widget", function() {
 		element(by.model('schedulerName')).sendKeys('Schedule 1');
 		element(by.model('schedulerStartDt')).clear();
 		element(by.model('schedulerStartDt')).sendKeys(sendDateString);
+		element(by.model('schedulerStartDt')).sendKeys(protractor.Key.ESCAPE);
 		
 		element(by.css('#schedulerFrequency option:nth-child(4)')).click()
 			.then(function() {
 				var interval = element(by.id('schedulerInterval'));
 				interval.clear(); 
 				interval.sendKeys('3');
-				element(by.id('save-button')).click();
-				browser.sleep(500)
+				element(by.css('#scheduler-buttons #save-button')).click();
+				browser.sleep(3000)
 					.then(function() {
-						element(by.id('rrule-result')).getText()
+						element(by.css('#scheduler-detail #rrule')).getAttribute('value')
 							.then(function(txt) {
 								element(by.id('modal-ok-button')).click();
 							 	expect(txt).toEqual('FREQ=DAILY;DTSTART=' + receiveDateString + ';INTERVAL=3');

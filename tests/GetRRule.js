@@ -10,8 +10,7 @@ describe("Get RRule without timezone", function() {
     
     var SchedulerInit,
         $scope,
-        schedules,
-        scheduler;
+        schedules;
 
     schedules = [{
         schedulerStartDt: '2013-12-12',
@@ -94,7 +93,9 @@ describe("Get RRule without timezone", function() {
         module('Timezones', function($provide) {
             $provide.constant('$timezones.definitions.location', '/base/bower_components/angular-tz-extensions/tz/data');
         });
-        module('AngularScheduler');
+        module('AngularScheduler', function($provide) {
+            $provide.constant('AngularScheduler.partials', '/lib/');
+        });
         inject( function($rootScope, _SchedulerInit_) {
             SchedulerInit = _SchedulerInit_;
             $scope = $rootScope.$new(true);
@@ -103,16 +104,16 @@ describe("Get RRule without timezone", function() {
 
     afterEach(function() {
         $scope.$destroy();
-    })
+    });
 
     it('should return an object', function() {
-        var scheduler = SchedulerInit({ scope: $scope });
+        var scheduler = SchedulerInit({ scope: $scope, requireFutureStartTime: false });
         expect(scheduler.inject).toBeDefined();
     });
 
     schedules.forEach(function(sched, idx) {
         it('should return ' + sched.result, function() {
-            var scheduler = SchedulerInit({ scope: $scope }),
+            var scheduler = SchedulerInit({ scope: $scope, requireFutureStartTime: false}),
                 result, key;
             for(key in sched) {
                 $scope[key] = sched[key];
@@ -152,22 +153,23 @@ describe("Get RRule with timezone", function() {
         });
         module('AngularScheduler', function($provide) {
             $provide.constant('AngularScheduler.useTimezone',true);
+            $provide.constant('AngularScheduler.partials', '/lib/');
         });
         inject( function($rootScope, _SchedulerInit_) {
             SchedulerInit = _SchedulerInit_;
-            $scope = $rootScope; 
+            $scope = $rootScope;
             //.$new(true);
         });
     });
 
     afterEach(function() {
         $scope.$destroy();
-    })
+    });
 
     it('should return an object', function() {
-        var scheduler = SchedulerInit({ scope: $scope });
-        expect(scheduler.inject).toBesDefined();
-    })
+        var scheduler = SchedulerInit({ scope: $scope, requireFutureStartTime: false });
+        expect(scheduler.inject).toBeDefined();
+    });
 
     it('should get the local timezone', function() {
         var scheduler = SchedulerInit({ scope: $scope }),
@@ -177,7 +179,7 @@ describe("Get RRule with timezone", function() {
 
     schedules.forEach(function(sched, idx) {
         it('should return ' + sched.result, function() {
-            var scheduler = SchedulerInit({ scope: $scope }),
+            var scheduler = SchedulerInit({ scope: $scope, requireFutureStartTime: false }),
                 result, key;
             for(key in sched) {
                 $scope[key] = sched[key];
