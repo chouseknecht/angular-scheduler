@@ -27,6 +27,10 @@ Visit the sample by pointing your browser to http://localhost:8000/app/index.htm
 
 Contributing
 ------------
+After cloning the repo, install the the bower packages listed in bower.json: 
+  
+    bower install
+
 Install the npm packages listed in package.json:
     
     node install
