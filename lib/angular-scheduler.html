@@ -80,6 +80,7 @@
                             ng-options="f.name for f in frequencyOptions" required class="form-control input-sm"
                             ng-change="scheduleRepeatChange()"></select>
                     </div>
+                    <div class="error" ng-show="sheduler_frequency_error"></div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group no-label" ng-show="schedulerShowInterval">
@@ -87,6 +88,7 @@
                         <input name="schedulerInterval" id="schedulerInterval" sch-spinner="scheduler_form" class="scheduler-spinner"
                             ng-model="schedulerInterval" min="1" max="999" >
                         <label class="inline-label" ng-bind="schedulerIntervalLabel"></label>
+                    <div class="error" ng-show="scheduler_interval_error">Provide a value between 1 and 999</div>
                     </div>
                 </div>
             </div>
@@ -196,7 +198,8 @@
                             <input ng-name="schedulerOccurrenceCount" ng-id="schedulerOccurrenceCount" sch-spinner="scheduler_form" class="scheduler-spinner"
                                 ng-model="schedulerOccurrenceCount" min="1" max="999" >
                             <label class="inline-label">Occurrence(s)</label> 
-                        </div>  
+                        </div>
+                        <div class="error" ng-show="scheduler_occurrenceCount_error">Provide a value between 1 and 999</div>
                     </div>
                 </div>
                 <div class="col-md-4" ng-show="schedulerEnd && schedulerEnd.value == 'on'">
