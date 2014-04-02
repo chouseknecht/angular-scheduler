@@ -44,8 +44,9 @@
                                 ng-model="schedulerStartHour" placeholder="HH24" min="0" max="23" data-zero-pad="2" required 
                                 ng-change="scheduleTimeChange" >
                             <span>:</span><input name="schedulerStartMinute" id="schedulerStartMinute" sch-spinner="scheduler_form" class="scheduler-time-spinner" ng-model="schedulerStartMinute" placeholder="MM" min="0" max="59" data-zero-pad="2" required ng-change="scheduleTimeChange" >
-                            <span>:</span><input name="schedulerStartSecond" id="schedulerStartSecond" sch-spinner="scheduler_form" class="scheduler-time-spinner" ng-model="schedulerStartSecond" placeholder="SS" min="0" max="23" data-zero-pad="2" required ng-change="scheduleTimeChange" >
+                            <span>:</span><input name="schedulerStartSecond" id="schedulerStartSecond" sch-spinner="scheduler_form" class="scheduler-time-spinner" ng-model="schedulerStartSecond" placeholder="SS" min="0" max="59" data-zero-pad="2" required ng-change="scheduleTimeChange" >
                         </div>
+                        <div class="error" ng-show="scheduler_startTime_error">Time must be in HH24:MM:SS format</div>
                     </div>
                 </div>
             </div>
