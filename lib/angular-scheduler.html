@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <label>Start Date <span class="fmt-help"> yyyy-mm-dd</span></label>
+                        <label>Start Date <span class="fmt-help"> mm/dd/yyyy</span></label>
                         <div class="input-group">
                             <input type="text" class="form-control input-sm" name="schedulerStartDt" id="schedulerStartDt"  ng-model="schedulerStartDt"
                                 sch-date-picker placeholder="YYYY-MM-DD" required ng-change="scheduleTimeChange()" >
@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-md-4" ng-show="schedulerShowTimeZone">
                     <div class="form-group">
-                        <label>Time Zone</label>
+                        <label>Local Time Zone</label>
                         <select name="schedulerTimeZone" id="schedulerTimeZone" ng-model="schedulerTimeZone" ng-options="z.name for z in timeZones"
                             required class="form-control input-sm" ng-change="scheduleTimeChange()" ></select>
                     </div>
