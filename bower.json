@@ -27,7 +27,7 @@
     "bootstrap": "~3.1.1",
     "rrule": "*",
     "timezone-js": "*",
-    "angular-tz-extensions": "*",
+    "angular-tz-extensions": "*"
   },
   "homepage": "https://github.com/chouseknecht/angular-scheduler",
   "main": "git@github.com:chouseknecht/angular-scheduler.git",
