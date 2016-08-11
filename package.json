@@ -1,7 +1,7 @@
 {
   "name": "angular-scheduler",
   "version": "0.0.20",
-  "main": "index.js",
+  "main": "lib/angular-scheduler.js",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.6.3",
@@ -19,6 +19,8 @@
     "karma-jasmine": "~0.2.1"
   },
   "dependencies": {
+    "jquery": "*",
+    "jquery-ui": "*",
     "angular": "~1.4.7",
     "rrule": "~2.1.0",
     "angular-tz-extensions": "chouseknecht/angular-tz-extensions",
