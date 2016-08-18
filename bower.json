@@ -19,14 +19,15 @@
     "jquery": "*",
     "jqueryui": "*",
     "less": "*",
-    "angular-mocks": "~1.2.13"
+    "angular-mocks": "~1.2.13",
   },
   "dependencies": {
     "angular": "~1.4.7",
     "rrule": "~2.1.0",
     "timezone-js": "~0.4.13",
     "angular-tz-extensions": "https://github.com/chouseknecht/angular-tz-extensions/archive/0.3.10.tar.gz",
-    "lodash": "*"
+    "lodash": "*",
+    "moment": "^2.10.2"
   },
   "homepage": "https://github.com/chouseknecht/angular-scheduler",
   "main": "git@github.com:chouseknecht/angular-scheduler.git",
