@@ -1,6 +1,6 @@
 {
   "name": "angular-scheduler",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "authors": [
     "Chris Houseknecht <chouse@ansible.com>"
   ],
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "angular": "~1.4.7",
-    "rrule": "~2.1.0",
+    "rrule": "jkbrzt/rrule#4ff63b2f8524fd6d5ba6e80db770953b5cd08a0c",
     "timezone-js": "~0.4.13",
     "angular-tz-extensions": "https://github.com/chouseknecht/angular-tz-extensions/archive/0.3.10.tar.gz",
     "lodash": "*",
