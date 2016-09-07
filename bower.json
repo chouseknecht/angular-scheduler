@@ -19,7 +19,7 @@
     "jquery": "*",
     "jqueryui": "*",
     "less": "*",
-    "angular-mocks": "~1.2.13",
+    "angular-mocks": "~1.2.13"
   },
   "dependencies": {
     "angular": "~1.4.7",
