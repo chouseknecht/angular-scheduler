@@ -15,7 +15,7 @@
     "angular": "~1.4.7",
     "rrule": "jkbrzt/rrule#4ff63b2f8524fd6d5ba6e80db770953b5cd08a0c",
     "angular-tz-extensions": "chouseknecht/angular-tz-extensions",
-    "lodash": "~3.8.0",
+    "lodash": "~4.17.15",
     "moment": "^2.10.2"
   }
 }
