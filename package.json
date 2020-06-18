@@ -12,7 +12,7 @@
   "dependencies": {
     "jquery": "*",
     "jquery-ui": "*",
-    "angular": "~1.4.7",
+    "angular": "~1.8.0",
     "rrule": "jkbrzt/rrule#4ff63b2f8524fd6d5ba6e80db770953b5cd08a0c",
     "angular-tz-extensions": "chouseknecht/angular-tz-extensions",
     "lodash": "~3.8.0",
