@@ -1,9 +1,9 @@
-angular-scheduler
+Angular-scheduler
 =================
 
-A UI widget for creating or editing repeating calendar entries. Dynamically injects HTML anwhere in an Angular app. Provides methods for converting schedule entry to and from RRule format, based on the [iCalendar RFC](http://www.ietf.org/rfc/rfc2445.txt).
+A UI widget for creating or editing repeatable calendar entries. Dynamically injects HTML anywhere in an Angular app. Provides methods for converting scheduled entry to and from RRule format, based on the [iCalendar RFC](http://www.ietf.org/rfc/rfc2445.txt).
 
-Intalling
+Installing
 ---------
 
 bower install angular-scheduler
@@ -59,7 +59,7 @@ Run tests found in the ./tests directory. GetRRule.js provides a set of unit tes
     cd test
     karma start
 
-SetRRule.js provides end-to-end tests that run with [Protractor](https://github.com/angular/protractor). Follow the instructions to install protractor and a local selenium server (assuming you don't have access to an existing selenium server). Launch the provided sample app (as described above) in a terminal session. In a separate terminal session launch a local selenium server. The test configuration file expects the web server to run at localhost:8000 and the selenium server to run at localhost:4444. In a third session luanch the tests:
+SetRRule.js provides end-to-end tests that run with [Protractor](https://github.com/angular/protractor). Follow the instructions to install protractor and a local selenium server (assuming you don't have access to an existing selenium server). Launch the provided sample app (as described above) in a terminal session. In a separate terminal session launch a local selenium server. The test configuration file expects the web server to run at localhost:8000 and the selenium server to run at localhost:4444. In a third session launch the tests:
  
 Session 1:   
     node ./scripts/web-server.js 8000
