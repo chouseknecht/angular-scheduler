@@ -1,7 +1,7 @@
 angular-scheduler
 =================
 
-A UI widget for creating or editing repeatable calendar entries. Dynamically injects HTML anywhere in an Angular app. Provides methods for converting scheduled entry to and from RRule format, based on the [iCalendar RFC](http://www.ietf.org/rfc/rfc2445.txt).
+A UI widget for creating or editing repeating calendar entries. Dynamically injects HTML anywhere in an Angular app. Provides methods for converting scheduled entry to and from RRule format, based on the [iCalendar RFC](http://www.ietf.org/rfc/rfc2445.txt).
 
 Installing
 ---------
